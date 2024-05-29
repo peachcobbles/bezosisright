@@ -26,7 +26,7 @@ document.getElementById('submit-guess').addEventListener('click', () => {
         attempts++;
         if (attempts <= maxAttempts) {
             if (userGuess >= currentItem.price * 0.9 && userGuess <= currentItem.price * 1.1) {
-                document.getElementById('result').textContent = `Correct! This item sells for ${currentItem.price}`;
+                document.getElementById('result').textContent = `Correct! This item sells for ${currentItem.price}$`;
                 document.getElementById('result').classList.add('correct');
                 document.getElementById('submit-guess').style.display = 'none';
                 document.getElementById('next-item').style.display = 'inline';
