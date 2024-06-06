@@ -7,20 +7,34 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="header-container">
+    <header class="header-container">
         <h1>The Bezos is Right</h1>
         <p>Guess the price of this item listed on Amazon!</p>
-    </div>
-    <div class="game-container">
-        <div class="item">
-            <img id="item-image" src="" alt="Item Image">
-            <h3 id="item-name"></h3>
+    </header>
+    <main class="game-container">
+        <div class="item-card">
+            <img id="item-image" src="" alt="Item Image" class="item-image">
+            <div class="item-info">
+                <h2 id="item-name" class="item-name"></h2>
+                <p id="items-in-cart">Items in Cart: 1/5</p>
+                <div class="guess-container">
+                    <input type="number" id="guess-input" placeholder="Enter your guess" min="0">
+                    <button id="submit-guess">Submit Guess</button>
+                    <button id="next-item" style="display: none;">Next Item</button>
+                    <button id="restart-game" style="display: none;">Restart Game</button>
+                </div>
+            </div>
         </div>
-        <input type="number" id="guess-input" placeholder="Enter your guess" min="0">
-        <button id="submit-guess">Submit Guess</button>
-        <p id="result"></p>
-        <button id="next-item" style="display: none;">Next Item</button>
-    </div>
+        <hr class="divider">
+        <div class="result-container">
+            <p id="result"></p>
+            <p id="score">Score: 0</p>
+            <p id="high-score">High Score: 0</p>
+        </div>
+    </main>
+    <footer class="footer-container">
+        <p>&copy; 2024 Amazon Clone. All rights reserved.</p>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>

@@ -1,32 +1,68 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Amazon Ember', Arial, sans-serif;
+    background-color: #f7f7f7;
+    margin: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    height: 10vh;
-    background-color: #f0f0f0;
-    margin: 0;
-    max-width: 40vw;
-    margin: 0 auto;
+    height: 100vh;
 }
 
 .header-container {
+    width: 40%;
+    background-color: #232f3e;
+    color: #ffffff;
     text-align: center;
-    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 20px;
 }
 
 .game-container {
-    text-align: center;
-    background: white;
+    text-align: left;
+    background: #ffffff;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 40%;
+    word-wrap: break-word;
+    margin-top: 20px;
 }
 
-.item img {
+.item-card {
+    display: flex;
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.item-image {
     max-width: 200px;
     height: auto;
+    margin-right: 20px;
+}
+
+.item-info {
+    text-align: left;
+}
+
+.item-name {
+    font-size: 1.5em;
+    margin: 0;
+}
+
+#items-in-cart {
+    font-size: 1em;
+    margin: 10px 0;
+}
+
+.guess-container {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
 }
 
 input, button {
@@ -35,11 +71,54 @@ input, button {
     font-size: 1em;
 }
 
+button {
+    background-color: #ff9900;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #e68a00;
+}
+
+button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.divider {
+    border: 1px solid #e7e7e7;
+    margin: 20px 0;
+}
+
+.result-container {
+    padding: 10px 0;
+    text-align: center;
+}
+
+#result {
+    margin: 0;
+}
+
+#score, #high-score {
+    margin: 0;
+}
+
 #result.correct {
-    animation: flash-green 1s;
+    color: green;
 }
 
 #result.incorrect {
+    color: red;
+}
+
+.flash-green {
+    animation: flash-green 1s;
+}
+
+.flash-red {
     animation: flash-red 1s;
 }
 
@@ -53,6 +132,12 @@ input, button {
     100% { background-color: transparent; }
 }
 
-#next-item {
-    display: none;
+.footer-container {
+    width: 100%;
+    background-color: #232f3e;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
 }
